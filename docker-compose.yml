@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  jellyfin-transubtitle:
+    build:
+      context: .
+      args:
+        - ALPINE_MIRROR=${ALPINE_MIRROR}
+        - PYPI_MIRROR=${PYPI_MIRROR}
+    container_name: jellyfin-transubtitle
+    image: hsojo/jellyfin-transubtitle
+    restart: unless-stopped
+    tty: true
+    environment:
+      - USER_NAME=${USER_NAME}
+      - BASE_URI=${BASE_URI}
+      - API_TOKEN=${API_TOKEN}
+      - JELLYFIN_TARGET_LANG=${JELLYFIN_TARGET_LANG}
+      - SCAN_INTERVAL=${SCAN_INTERVAL}
+      - BAIDU_APP_ID=${BAIDU_APP_ID}
+      - BAIDU_APP_KEY=${BAIDU_APP_KEY}
+      - BAIDU_TARGET_LANG=${BAIDU_TARGET_LANG}
