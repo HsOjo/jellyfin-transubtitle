@@ -1,8 +1,14 @@
-## jellyfin-transubtitle
+# jellyfin-transubtitle
 
 这是一个用于自动将Jellyfin媒体服务器中的ASS格式字幕翻译成其他语言的Python脚本。它使用百度文本翻译API进行翻译。
 
-### 参数说明
+## 如何使用
+
+1. 安装 Docker（包括 Docker Compose）。
+2. 复制 ```.env.example``` 文件并将其命名为 ```.env```，然后进行编辑。
+3. 执行 ```docker-compose up``` 命令来启动容器（如果要作为守护进程运行，则添加 ```-d``` 选项）。
+
+## 参数说明
 
 以下是可以定义的参数及其作用：
 
@@ -14,7 +20,7 @@
 
 在运行脚本之前，请确保正确设置环境变量。
 
-#### 百度文本翻译API
+### 百度文本翻译API
 
 该脚本使用百度文本翻译API。这需要设置以下百度API凭据作为环境变量：
 
@@ -22,7 +28,7 @@
 - `BAIDU_APP_KEY`：百度文本翻译API的App Key。
 - `BAIDU_TARGET_LANG`：使用百度文本翻译API进行翻译的[目标语言](http://api.fanyi.baidu.com/doc/21)。
 
-### 其他说明
+## 其他说明
 
 该脚本执行以下任务：
 

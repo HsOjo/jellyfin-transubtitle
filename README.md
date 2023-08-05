@@ -1,9 +1,15 @@
-## jellyfin-transubtitle
+# jellyfin-transubtitle
 
 This is a Python script that performs automatic translation of subtitles in the ASS format for media items
 in a Jellyfin media server. It uses the Baidu Text Translation API for translation purposes.
 
-### Parameter Description
+## How To Use
+
+1. Install Docker (Compose)
+2. Edit the ```.env``` file. (Copy from .env.example)
+3. Execute ```docker-compose up``` (If as daemon, Add the ```-d``` option.)
+
+## Parameter Description
 
 The following are the parameters that can be defined and their purposes:
 
@@ -15,7 +21,7 @@ The following are the parameters that can be defined and their purposes:
 
 Ensure that the environment variables are correctly set before running the script.
 
-#### Baidu Text Translation API
+### Baidu Text Translation API
 
 The script utilizes the Baidu Text Translation API. That requires the following Baidu API credentials to be set as
 environment variables:
@@ -24,7 +30,7 @@ environment variables:
 - `BAIDU_APP_KEY`: The App Key for the Baidu Text Translation API.
 - `BAIDU_TARGET_LANG`: The [target language](http://api.fanyi.baidu.com/doc/21) for translation using the Baidu Text Translation API.
 
-### Other Notes
+## Other Notes
 
 The script performs the following tasks:
 

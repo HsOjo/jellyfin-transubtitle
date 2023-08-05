@@ -1,4 +1,4 @@
-# Language Table
+# Jellyfin Language Code Table
 
 | Code | Language                                                                         |
 |------|----------------------------------------------------------------------------------|
